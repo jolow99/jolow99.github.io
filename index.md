@@ -28,5 +28,6 @@ I am involved in a range of communities and try to actively contribute wherever 
 **Projects**
 
 Most of my projects have been in the web3 space.
+  - I experimented with Contract Secured Revenue with [csrDAO](https://x.com/theCOH_/status/1659378382327681024)
   - I won ETHDenver 2023 with a [public goods funding protocol](https://app.buidlbox.io/projects/fundpg?path=projects%2Ffundpg)
   - I built the first [DEX for security tokens](https://www.youtube.com/watch?v=MrxL0Ne3pEk) on Polymesh  

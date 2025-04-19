@@ -23,7 +23,7 @@ plugins:
 # Site settings
 url: 'https://jolow99.github.io'
 baseurl: ""
-title: 'My website'
+title: 'Joseph Low'
 description: 'This is my new website'
 permalink: pretty
 logo: "/assets/images/jolow.png"
