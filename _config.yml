@@ -22,7 +22,7 @@ plugins:
 
 # Site settings
 url: 'https://jolow99.github.io/'
-baseurl: ""
+baseurl: "/"
 title: 'My website'
 description: 'This is my new website'
 permalink: pretty
