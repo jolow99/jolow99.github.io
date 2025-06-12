@@ -23,7 +23,7 @@ plugins:
 # Site settings
 url: 'https://jolow99.github.io'
 baseurl: ""
-title: 'Joseph Low'
+title: 'Jolow'
 description: 'This is my new website'
 permalink: pretty
 logo: "/assets/images/jolow.png"
@@ -36,15 +36,19 @@ paginate_path: blog/page:num
 navigation_header:
 - title: Home
   url: /
-- title: About
-  url: /about/
 - title: Blog
   url: /blog/
 
 # Footer nav
 navigation_footer:
-- title: Back to top
-  url: "#top"
+- title: GitHub
+  url: https://github.com/jolow99
+- title: LinkedIn
+  url: https://www.linkedin.com/in/joseph-low-bc/
+- title: Instagram
+  url: https://www.instagram.com/jolowprofile/
+- title: Substack
+  url: https://jolow.substack.com
 
 # Collections
 collections:

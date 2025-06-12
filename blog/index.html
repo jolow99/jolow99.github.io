@@ -1,5 +1,176 @@
 ---
-layout: blog
-collectionpage: posts
+layout: page
 title: Blog
 ---
+
+<div class="rss-container">
+  <div id="rss-feed-container">
+    <p>Loading posts...</p>
+  </div>
+</div>
+
+<style>
+  .rss-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .post-item {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+  }
+  .post-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  .post-date {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+  .post-content {
+    line-height: 1.6;
+  }
+  .post-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #0366d6;
+    text-decoration: none;
+  }
+  .post-link:hover {
+    text-decoration: underline;
+  }
+  .error-message {
+    color: #d73a49;
+    padding: 15px;
+    background-color: #f8d7da;
+    border-radius: 4px;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const substackUrl = 'https://jolow.substack.com/feed';
+    const mediumUrl = 'https://medium.com/@jolow999/feed';
+    const corsProxy = 'https://api.rss2json.com/v1/api.json?rss_url=';
+    const feedContainer = document.getElementById('rss-feed-container');
+    
+    // Show loading message
+    feedContainer.innerHTML = '<p>Loading posts...</p>';
+    
+    // Fetch both RSS feeds
+    Promise.all([
+      // Fetch Substack feed
+      fetch(corsProxy + encodeURIComponent(substackUrl))
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok for Substack feed');
+          }
+          return response.json();
+        }),
+      // Fetch Medium feed
+      fetch(corsProxy + encodeURIComponent(mediumUrl))
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok for Medium feed');
+          }
+          return response.json();
+        })
+    ])
+    .then(([substackData, mediumData]) => {
+      // Validate feed data
+      if (substackData.status !== 'ok' && mediumData.status !== 'ok') {
+        throw new Error('Failed to fetch both feeds');
+      }
+      
+      // Clear loading message
+      feedContainer.innerHTML = '';
+      
+      // Combine feed items
+      let allItems = [];
+      
+      // Add Substack items if available
+      if (substackData.status === 'ok') {
+        allItems = allItems.concat(substackData.items);
+      }
+      
+      // Add Medium items if available
+      if (mediumData.status === 'ok') {
+        allItems = allItems.concat(mediumData.items);
+      }
+      
+      // Sort by publication date (newest first)
+      allItems.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
+      
+      // Display no posts message if no items
+      if (allItems.length === 0) {
+        feedContainer.innerHTML = '<p>No posts found.</p>';
+        return;
+      }
+      
+      // Process and display feed items
+      allItems.forEach(item => {
+        const postDate = new Date(item.pubDate);
+        const formattedDate = postDate.toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        });
+        
+        // Create a preview for Medium articles
+        let contentPreview = item.description;
+        
+        // Check if this is a Medium article by looking at the link
+        if (item.link && item.link.includes('medium.com')) {
+          // Create a temporary div to parse the HTML content
+          const tempDiv = document.createElement('div');
+          tempDiv.innerHTML = item.description;
+          
+          // Get the text content
+          const fullText = tempDiv.textContent || tempDiv.innerText || '';
+          
+          // Look for "Photo by" which typically indicates the start of image attribution
+          const photoByIndex = fullText.indexOf('Photo by');
+          
+          if (photoByIndex > 0) {
+            // Extract text before "Photo by" for a cleaner preview
+            contentPreview = fullText.substring(0, photoByIndex).trim();
+            
+            // Add ellipsis if the preview isn't the full content
+            if (contentPreview.length < fullText.length) {
+              contentPreview += '...';
+            }
+          } else {
+            // Fallback to character limit if "Photo by" isn't found
+            contentPreview = fullText.substring(0, 150).trim();
+            if (fullText.length > 150) {
+              contentPreview += '...';
+            }
+          }
+        }
+        
+        const postElement = document.createElement('div');
+        postElement.className = 'post-item';
+        
+        postElement.innerHTML = `
+          <h2 class="post-title">${item.title}</h2>
+          <div class="post-date">${formattedDate}</div>
+          <div class="post-content">${contentPreview}</div>
+          <a href="${item.link}" class="post-link" target="_blank">Read more</a>
+        `;
+        
+        feedContainer.appendChild(postElement);
+      });
+    })
+    .catch(error => {
+      console.error('Error fetching RSS feeds:', error);
+      feedContainer.innerHTML = `
+        <div class="error-message">
+          <p>Failed to load the RSS feeds. Please try again later.</p>
+          <p>Error: ${error.message}</p>
+        </div>
+      `;
+    });
+  });
+</script>
