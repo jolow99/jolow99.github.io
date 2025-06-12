@@ -1,9 +1,30 @@
-# Starter kit for [Alembic](https://alembic.darn.es/)
+# Joseph Low's Personal Website
 
-This is a very simple starting point if you wish to use Alembic [as a Jekyll theme gem](https://alembic.darn.es/#as-a-jekyll-theme) or as a [GitHub Pages remote theme](https://github.com/daviddarnes/alembic-kit/tree/remote-theme) (see `remote-theme` branch).
+This is my personal website hosted at [www.jolow.me](https://www.jolow.me), built with Jekyll using the Alembic theme.
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/daviddarnes/alembic-kit)
+## About
 
-or
+This site serves as my digital garden where I share my work, research, and projects related to DAOs, AI, and community building. The blog section pulls content from my Substack.
 
-**[Download the GitHub Pages kit](https://github.com/daviddarnes/alembic-kit/archive/remote-theme.zip)**
+## Running Locally
+
+To run this site locally:
+
+1. Make sure you have Ruby and Bundler installed
+2. Clone this repository
+3. Install dependencies:
+   ```
+   bundle install
+   ```
+4. Start the local server:
+   ```
+   bundle exec jekyll serve
+   ```
+5. Visit `http://localhost:4000` in your browser
+
+## Structure
+
+- `index.md` - Main landing page
+- `about.md` - About page
+- `blog/index.html` - Blog page (pulls content from Substack)
+- `assets/` - Contains images and PDFs
