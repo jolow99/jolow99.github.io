@@ -1,32 +1,30 @@
 ---
-title: Hi, I'm Joseph Low 👋
+title: Hi, I'm Joseph 👋
 ---
-I used to be good at introductions. Lately, it's been harder. The usual labels don’t quite fit.
+I'm a community governance researcher exploring the promises and perils of using technology to build community and organize collective action.
 
-One I’ve been trying on is community gardener. Not manicured, soulless gardens, but ones full of life and surprises. I like to imagine you and I planting seeds in physical and digital spaces that might grow into meaningful, lasting communities.
+I work as a Research Engineer at [Metagov](https://metagov.org), where I conduct research and build products involving [deliberative tooling](https://metagov.org/delib-tools), [Public AI](https://publicai.co) and [DAOs](https://daostar.org).
 
-I’ve been gardening my whole life, but recently learnt some of the seeds I planted were actually weeds. Even now, I’m not sure if the ones I’m planting will be welcomed or pulled out. Still, I keep planting because maybe something unexpected will take root.
+I came to this work through being an engineer in the web3 space, drawn to the idealism of building community for positive change. But I also encountered an uncomfortable truth: these efforts often reproduced the very problems they aimed to solve. I call this the "commodification of community". This tension drove me to pursue a master's thesis questioning the fundamental nature of community. My research proposed an ontology for understanding what or who is the "community" that engages in collective action, and what does it take to form and sustain it.
 
-This site is where I share what I’m growing. If you're curious about anything or found something meaningful, feel free to contact me on telegram [@jolow](https://telegram.me/jolow). 
+Outside of work, I'm an avid trail runner and a recovering coffee snob. Observing the politics of road running versus trail running, or how major races pull all the demand while independent race organizers struggle, has shaped how I think about community boundaries and power. I used to give coffee workshops to about 50 students a month, but have since started questioning the prescriptive notions of "good taste" I once embodied. This shift motivates my interest in pluralistic alignment. Turns out community governance shows up everywhere once you start looking for it.
 
-**Currently:** I'm figuring out how to build a career that I find personally meaningful
-<li>I run the research fellowship programme at <a href="https://daostar.substack.com/p/meet-our-daostar-research-fellows?triedRedirect=true">DAOstar</a></li>
-<li>I am building AI agents to run a community bank</li>
-<li>I am figuring out how to build AI to help with community building in an unproblematic way</li>
-<li>I am exploring the fields of computational social choice and trying to gain more experience with research</li>
-  
+**What I'm up to:**
+- I am exploring how to equip an AI facilitator with established facilitation methodologies. I will be going to Capetown for 3 months from Feb as part of the [Cooperative AI Research Fellowship](https://www.cai-research-fellowship.com/)
+- I am building a computational model of how humans infer their specialized role in a group
+- I am working on making [AI inference utilities](https://publicai.co) a reality, the same way that we have water or electricity utility companies 
+- I'm thinking about the [future of DAOs](https://daostar.org/research) and how they intersect with AI. How do we build organizations that may not have any humans, but use this for good? 
 
-**Research:** My research is on the intersection of DAOs, AI and Community.
-<li>I wrote a paper on the <a href="assets/pdfs/public-ai-sg.pdf">State of Public AI in Singapore</a></li>
-<li>I wrote a paper on the <a href="https://daostar.org/reports/singapore.pdf">State of DAOs in Singapore</a></li>
-<li>I gave a talk at <a href="https://www.youtube.com/watch?v=8zy3C3pYh48">Devcon</a> and organized the <a href="https://lu.ma/r85s879b">DAO Asia Summit</a></li>
-<li>I completed my master's thesis proposing an <a href="assets/pdfs/intentions-are-all-we-need.pdf">ontology of community</a></li>
-
-**Events:** I am involved in a range of communities and try to actively contribute wherever I can.
-<li>I organized the <a href="https://lu.ma/r85s879b">DAO Asia Summit</a> with Digital Asia Hub and Pagoda</li>
-<li>I hosted an event about the <a href="https://partiful.com/e/kI8MqZSjBeyIriHGSFPs">commodification of community</a> with Strangerconvos</li>
-
-**Projects:** Most of my projects have been in the web3 space.
-<li>I experimented with Contract Secured Revenue with <a href="https://x.com/theCOH_/status/1659378382327681024">csrDAO</a></li>
-<li>I won ETHDenver 2023 with a <a href="https://app.buidlbox.io/projects/fundpg?path=projects%2Ffundpg">public goods funding protocol</a></li>
-<li>I built the first <a href="https://www.youtube.com/watch?v=MrxL0Ne3pEk">DEX for security tokens</a> on Polymesh</li>
+**What I was up to:**
+- I wrote a paper on the [State of Public AI in Singapore](assets/pdfs/public-ai-sg.pdf)
+- I wrote a paper on the [State of DAOs in Singapore](https://daostar.org/reports/singapore.pdf)
+- I gave a talk at [Devcon](https://www.youtube.com/watch?v=8zy3C3pYh48) and organized the [DAO Asia Summit](https://lu.ma/r85s879b)
+- I completed my master's thesis proposing an [ontology of community](assets/pdfs/intentions-are-all-we-need.pdf)
+- I ran the research fellowship programme at [DAOstar](https://daostar.substack.com/p/meet-our-daostar-research-fellows?triedRedirect=true)
+- I built a platform to "complain better" facilitated by AI agents [Complain.sg](https://complain.sg) - 
+- I measured unconscious spatial preferences to improve design workflows in architecture based on [EEG and eye-tracking data](https://www.linkedin.com/posts/gordongn_do-we-have-unique-and-measurable-spatial-ugcPost-7274627805139628034-eaLo)
+- I organized the [DAO Asia Summit](https://lu.ma/r85s879b) with Digital Asia Hub and Pagoda
+- I hosted an event about the [commodification of community](https://partiful.com/e/kI8MqZSjBeyIriHGSFPs) with Strangerconvos
+- I experimented with Contract Secured Revenue with [csrDAO](https://x.com/theCOH_/status/1659378382327681024)
+- I won ETHDenver 2023 with a [public goods funding protocol](https://app.buidlbox.io/projects/fundpg?path=projects%2Ffundpg)
+- I built the first [DEX for security tokens](https://www.youtube.com/watch?v=MrxL0Ne3pEk) on Polymesh
